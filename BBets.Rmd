@@ -22,11 +22,11 @@ require(knitr)
 
 <!--In this section you explain what you are trying to show.  Where did the data come from?  What is the research or other question you are trying to answer?!-->
 
- At the first day of class there are 35 students in Math Statistics class and professor Brownlow always proposes this bet to his students "I will wager $2 to your bet of $1 that at least two people in today's class have  the same birthday.  He tells me he has made that bet 637 times so far. Where do you think his profits are? Discuss this in a markdown document
+ At the first day of class there are 28 students in Math Statistics class and professor Brownlow always proposes this bet to his students "I will wager $2 to your bet of $1 that at least two people in today's class have  the same birthday.  He tells me he has made that bet 637 times so far. Where do you think his profits are? Discuss this in a markdown document
  
 Report git commit structure:
 There are 3 questions and there should be at least 3 separate commits, at least one dealing with each of the 3 questions.
-1. What are the fair odds for a bet on matching birthdays in a 35 person class.
+1. What are the fair odds for a bet on matching birthdays in a 28 person class.
 2. For what size class is a 2:1 odds bet fair.
 3. How much money would Brownlow be expected to end up with if the bets went as described.
 
@@ -51,7 +51,7 @@ probRPT=l/1000
 print(probRPT)
 ```
 
-probability of win is about, probability of lose is .428
+probability of win is about 0.572, probability of lose is .428
 
 <!--Decide on your methods:  In this section explain the approach you will take to attack the issue --- how will you decide on a likely estimate of professor Brownlow's earnings or losses after 637 bets. Also explain how you construct a 95% confidence interval about your estimate of his winnings !-->
 
@@ -71,7 +71,6 @@ probRPT=l/1000
 print(probRPT)
 ```
 Correct class size for 2:1 payoff is 27. 95% of the time the return is between 2 numbers. 
-
 ```{r}
 sortedRPT=sort(saveRPT)
 lci=sortedRPT[25]
@@ -79,13 +78,11 @@ uci=sortedRPT[975]
 print(lci)
 print(uci)
 ```
-
- # In the class and payoff as described what is a 95% confidence interval for Brownlow's earnings?
-  The answer is the lci is 19 out of 1000, uci would be 634.  
+# In the class and payoff as described what is a 95% confidence interval for Brownlow's earnings?
 <!--Explain and display your method of coming up with a 95% confidence interval of  professor Brownlows winnings (or losings)-->
+  The answer is the lci is 19 out of 1000, uci would be 634.  
 
 
- # Discussion and Conclusion
-
+# Discussion and Conclusion
 <!--Discussion and conclusion here.  If professor Brownlow is consistantly making or losing money how could he change his payout so that his profits center on zero?  Also discuss what size his class should be in order to have his current scheme balance at zero profit.!-->
 The 95% confidence interval for professor Brownlow's earnings is [19,634]. To achieve zero profit professor Brownlow must adjust the payout so that the expected value of the bet become zero. The class size would have to be 23 students, thats when the probability of a shared bday reaches 1/3.
