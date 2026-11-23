@@ -86,3 +86,5 @@ print(uci)
 # Discussion and Conclusion
 <!--Discussion and conclusion here.  If professor Brownlow is consistantly making or losing money how could he change his payout so that his profits center on zero?  Also discuss what size his class should be in order to have his current scheme balance at zero profit.!-->
 The 95% confidence interval for professor Brownlow's earnings is [19,634]. To achieve zero profit professor Brownlow must adjust the payout so that the expected value of the bet become zero. The class size would have to be 23 students, thats when the probability of a shared bday reaches 1/3.
+
+
